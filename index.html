@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Lottie</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: pink;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    color: white;
+}
+p {
+    color: white;
+    font-size: 18px;
+    line-height: 1.6;
+}
+button {
+    padding: 10px 20px;
+    background-color: pink;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: pink;
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>For Lottie</h1>
+    <p>Hey Lottie, if you're feeling sad, just know that I'm always here for you. Click the button to make your day just a little better and hopefully put a smile on your face :) (Currently 6 messages, tell me if you want more)</p>
+    <button onclick="showMessage()">Click Me!</button>
+    <p id="message" style="display: none;"></p>
+</div>
+<script>
+function showMessage() {
+    var messages = [
+        "I'm always here for you, I promise :)",
+        "You look cute today.. actually.. you always do :)",
+        "I'm giving you a hug through my phone rn :)",
+        "I love youuu :)",
+        "You always make me smile. Every. Single. Day. :)",
+        "I'm proud of you and I always will be :)"
+    ];
+    var randomMessage = messages[Math.floor(Math.random() * messages.length)];
+    
+    var message = document.getElementById("message");
+    message.innerText = randomMessage;
+    message.style.display = "block";
+}
+</script>
+</body>
+</html>
